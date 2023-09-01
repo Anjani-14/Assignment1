@@ -1,0 +1,29 @@
+package com.assignments.basics;
+
+public class ReverseArray {
+	    public static void main(String[] args) {
+	        int[] arr = {1, 2, 3, 4, 5};        
+	        System.out.println("Original Array:");
+	        printArray(arr);	        
+	        reverseArray(arr);
+	        System.out.println("\nReversed Array:");
+	        printArray(arr);
+	    }
+	    
+	    public static void reverseArray(int[] arr) {
+	        int n = arr.length;
+	        for (int i = 0; i < n / 2; i++) {
+	            int temp = arr[i];
+	            arr[i] = arr[n - 1 - i];
+	            arr[n - 1 - i] = temp;
+	        }
+	    }
+	    
+	    public static void printArray(int[] arr) {
+	        for (int num : arr) {
+	            System.out.print(num + " ");
+	        }
+	        System.out.println();
+	    }
+	}
+
